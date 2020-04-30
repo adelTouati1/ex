@@ -15,6 +15,7 @@ public class bullyLeaderElection {
     DatagramSocket datagramSocketSending;
     DatagramSocket datagramSocketReceving;
     static int numberOfServers = 5;
+    int ports = 5142;
     int port = 5141;
 
     public bullyLeaderElection(){
@@ -26,7 +27,7 @@ public class bullyLeaderElection {
             servers.put(5,InetAddress.getByName("127.17.0.6")); 
 
 
-            datagramSocketSending =  new DatagramSocket(port);
+            datagramSocketSending =  new DatagramSocket(ports);
             datagramSocketReceving =  new DatagramSocket(port);
         } catch (UnknownHostException |SocketException e) {
             e.printStackTrace();
