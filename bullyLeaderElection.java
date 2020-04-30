@@ -1,4 +1,3 @@
-package Server;
 
 
 import java.io.IOException;
@@ -6,9 +5,6 @@ import java.net.*;
 import java.util.HashMap;
 import java.util.LinkedHashMap;
 
-/**
- * Created by Nihkilesh Kshirsagar on 4/3/17.
- */
 
 public class bullyLeaderElection {
     HashMap<Integer, InetAddress> servers = new HashMap<>();
@@ -37,15 +33,7 @@ public class bullyLeaderElection {
         }
     }
 
-    /**
-     * receiving the data from other the servers
-     * receiving message types
-     * 1. election
-     * 2. election_reply
-     * 3. heartbeat
-     * 4. heartbeat_reply
-     * 5. coordinator
-     */
+
     void recevingMessage(){
         while (true) {
             try {
